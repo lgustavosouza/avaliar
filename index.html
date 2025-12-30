@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+    <script>
+        window.onload = function() {
+            // URL direta para avaliação da Auto Socorro Pardal
+            var url = "https://search.google.com/local/writereview?placeid=ChIJkQxVL2f3yJQRHpKft5B7KOU";
+            
+            // Tenta abrir via Intent (força navegador externo no Android)
+            var intentUrl = "intent://" + url.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
+            
+            window.location.href = intentUrl;
+
+            // Fallback: se em 500ms não redirecionar, usa a URL normal
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500);
+        };
+    </script>
+</head>
+<body>
+    <p>A carregar página de avaliação...</p>
+</body>
+</html>
