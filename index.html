@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2;url=https://search.google.com/local/writereview?placeid=ChIJkQxVL2f3yJQRHpKft5B7KOU">
     <title>Avaliar Auto Socorro Pardal</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        .btn { 
-            display: inline-block; padding: 15px 25px; background-color: #4285F4; 
-            color: white; text-decoration: none; border-radius: 5px; font-weight: bold; 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 400px;
+        }
+        h2 { margin-bottom: 10px; font-size: 20px; }
+        p { margin-bottom: 30px; color: #666; font-size: 16px; }
+        
+        .btn-google {
+            display: block;
+            background-color: #4285F4;
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+        .btn-google:active {
+            background-color: #3367D6;
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
-    <h2>Redirecionando para o Google...</h2>
-    <p>Se a página de avaliação não abrir automaticamente, clique no botão abaixo:</p>
-    
-    <a href="https://search.google.com/local/writereview?placeid=ChIJkQxVL2f3yJQRHpKft5B7KOU" 
-       class="btn" id="link-google" target="_blank" rel="noopener noreferrer">
-        ABRIR NO GOOGLE
-    </a>
 
-    <script>
-        function redirecionar() {
-            var url = "https://search.google.com/local/writereview?placeid=ChIJkQxVL2f3yJQRHpKft5B7KOU";
-            
-            // Tenta o método de clique simulado que é mais difícil de bloquear
-            var a = document.createElement('a');
-            a.href = url;
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer';
-            a.click();
-            
-            // Fallback imediato
-            window.location.replace(url);
-        }
+    <div class="container">
+        <h2>Sua opinião é muito importante!</h2>
+        <p>Clique no botão abaixo para abrir a página de avaliação no Google.</p>
         
-        // Executa após 1 segundo
-        setTimeout(redirecionar, 1000);
-    </script>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJkQxVL2f3yJQRHpKft5B7KOU" 
+           class="btn-google" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            ⭐ AVALIAR NO GOOGLE
+        </a>
+    </div>
+
 </body>
 </html>
